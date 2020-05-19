@@ -1,5 +1,5 @@
-const colorarray = ['#F44336','#E91E63','#9C27B0','#2196F3','#00897B','#43A047','#FB8C00','#795548'];
-const colornames = ['Red','Pink','Purple','Blue','Teal','Green','Orange','Brown']
+const colorarray = ['#4caf50','#ffeb3b','#fb8c00','#e53935','#795548','#757575','#7b1fa2','#1976d2'];
+const colornames = ['green','yellow','orange','red','brown','gray','purple','blue']
 
 //Colour picker
 function randomIntFromInterval(min, max) { // min and max included 
@@ -13,6 +13,6 @@ function setup() {
 function draw() {
 	strokeWeight(0);
 	fill(colorarray[randomIntFromInterval(0,colorarray.length-1)]);
-	ellipse(mouseX, mouseY, 20, 20);
+	ellipse(mouseX, mouseY, Math.floor(Math.random() * 100, Math.floor(Math.random() * 100)));
 	
 }
