@@ -331,6 +331,38 @@
         "name": "ios-icon-29.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "loader.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "loader.mp3",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gamebypi.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gamebypi.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Pi.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Pi.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Roboto-Light.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Roboto-Light.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -342,6 +374,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/splashscreen"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/mainmenu"
     }
   ],
   "externalEvents": [],
