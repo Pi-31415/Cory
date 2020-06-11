@@ -1,6 +1,6 @@
 # cory.io
 
-![Image of logo](logo.png)
+![Image of logo](android-icon-144.png)
 
 Prototype at https://paingthet.com/projvid/cory.mp4
 
