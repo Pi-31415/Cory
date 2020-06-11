@@ -1,6 +1,6 @@
 # cory.io
 
-![logo][desktop-icon-512.png]
+![logo][./desktop-icon-512.png]
 
 Prototype at https://paingthet.com/projvid/cory.mp4
 
