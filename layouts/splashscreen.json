@@ -25,19 +25,39 @@
     "zoomFactor": 1
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "screen_touced",
+      "value": "0"
+    }
+  ],
   "instances": [
     {
       "angle": 0,
       "customSize": true,
-      "height": 177,
+      "height": 300,
       "layer": "",
       "locked": false,
       "name": "pilogo",
-      "width": 177,
-      "x": 403,
+      "width": 300,
+      "x": 400,
       "y": 279,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "text",
+      "width": 0,
+      "x": 291,
+      "y": 86,
+      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -66,8 +86,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 199.859,
+                    "y": 200.117
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -85,17 +105,17 @@
     },
     {
       "bold": false,
-      "italic": true,
-      "name": "Text_agameby",
+      "italic": false,
+      "name": "text",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "A GAME BY ",
+      "string": "touch screen to start",
       "font": "Roboto-Light.ttf",
-      "characterSize": 34,
+      "characterSize": 20,
       "color": {
         "b": 0,
         "g": 0,
@@ -139,14 +159,24 @@
         {
           "type": {
             "inverted": false,
-            "value": "PlaySound"
+            "value": "Opacity"
           },
           "parameters": [
-            "",
-            "loader.mp3",
-            "no",
-            "100",
-            ""
+            "pilogo",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "MettreX"
+          },
+          "parameters": [
+            "text",
+            "=",
+            "(SceneWindowWidth()/2)-100"
           ],
           "subInstructions": []
         },
@@ -177,12 +207,12 @@
         {
           "type": {
             "inverted": false,
-            "value": "Opacity"
+            "value": "MettreY"
           },
           "parameters": [
-            "pilogo",
+            "text",
             "=",
-            "0"
+            "SceneWindowHeight()/2"
           ],
           "subInstructions": []
         }
@@ -193,7 +223,80 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SourisBouton"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::Opacity"
+          },
+          "parameters": [
+            "text",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "screen_touced",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlayMusicCanal"
+          },
+          "parameters": [
+            "",
+            "loader.mp3",
+            "1",
+            "no",
+            "100",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarScene"
+          },
+          "parameters": [
+            "screen_touced",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
       "actions": [
         {
           "type": {
@@ -223,7 +326,7 @@
           "parameters": [
             "pilogo",
             ">=",
-            "110"
+            "150"
           ],
           "subInstructions": []
         }

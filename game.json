@@ -363,6 +363,15 @@
         "metadata": "",
         "name": "Roboto-Light.ttf",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "kamon copy.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "kamon copy.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
